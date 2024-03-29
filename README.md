@@ -32,7 +32,7 @@ You can download the pretrained models in this [anonymous Google drive link](htt
 | CIFAR-10, $L_\infty$-norm Attack | Vanilla | Fast | Free | 
 | ------ | ------ | ----- | ---- | 
 | Train Accuracy (%) | 89.1 | 54.4 | 57.4 | 
-| Test Accuracy (%) | 40.7 | 30.0 | 42.3 | 
+| Test Accuracy (%) | 40.7 | 31.0 | 42.3 | 
 | Generalization Gap (%) | 48.4 | 23.4 | 15.1 | 
 
 
