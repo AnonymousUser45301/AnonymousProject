@@ -18,7 +18,7 @@ python3 test_autoattack.py  --model_path cifar10_l2_free  --data cifar10  --atta
 
 
 ## Performance Comparison
-You can download the pretrained models in this [anonymous Google drive link](https://drive.google.com/drive/folders/18so78-vONvd6lZqLs26IwnaAXxfN1BvR?usp=drive_link). The outputs are saved in `model_pth/MODEL_NAME/test_autoattack_output.log`, and it can be reproduced bt setting random seed as 1. 
+You can download the pretrained models in this [anonymous Google drive link](https://drive.google.com/drive/folders/18so78-vONvd6lZqLs26IwnaAXxfN1BvR?usp=drive_link). The outputs are saved in `model_pth/MODEL_NAME/test_autoattack_output.log`, and it can be reproduced by setting random seed as 1. 
 
 ### Robust accuracy of ResNet-18 models against AutoAttack
 
