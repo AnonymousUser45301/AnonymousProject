@@ -60,11 +60,11 @@ def main():
     kwargs = {'num_workers': 0, 'pin_memory': True} 
 
     if args.data == 'cifar10':
-        trainDataset = dset.CIFAR10(root='data/cifar10', train=True, download=True, transform=trainTransform)
-        testDataset = dset.CIFAR10(root='data/cifar10', train=False, download=True, transform=testTransform)
+        trainDataset = dset.CIFAR10(root='cifar10', train=True, download=True, transform=trainTransform)
+        testDataset = dset.CIFAR10(root='cifar10', train=False, download=True, transform=testTransform)
     elif args.data == 'cifar100':
-        trainDataset = dset.CIFAR100(root='data/cifar100', train=True, download=True, transform=trainTransform)
-        testDataset = dset.CIFAR100(root='data/cifar100', train=False, download=True, transform=testTransform)
+        trainDataset = dset.CIFAR100(root='cifar100', train=True, download=True, transform=trainTransform)
+        testDataset = dset.CIFAR100(root='cifar100', train=False, download=True, transform=testTransform)
 
     trainLoader = DataLoader(trainDataset, batch_size=args.batchSz, shuffle=True, **kwargs)
     testLoader = DataLoader(testDataset, batch_size=args.batchSz, shuffle=False, **kwargs)
