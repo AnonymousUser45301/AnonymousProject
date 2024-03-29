@@ -5,14 +5,14 @@ This repository provides an official implementation of a paper that under double
 
 ## Getting started
 
-To adversarially train a ResNet-18 model against $L_2$-norm attack of radius 128.0/255.0 by the free-AT algorithm, run: 
+To adversarially train a ResNet-18 model against $L_2$-norm attack by the free-AT algorithm, run: 
 ```
 python train.py   --data cifar10  --method free  --attack L2  --eps 128.0  --model res18  --save_path cifar10_l2_free
 ```
 
 To evaluate the model against [AutoAttack](https://github.com/fra31/auto-attack), run: 
 ```
-python3 test_autoattack.py  --model_path cifar10_l2_free  --data cifar10  --attack L2  --eps 128.0  --seed 1 
+python test_autoattack.py  --model_path cifar10_l2_free  --data cifar10  --attack L2  --eps 128.0  --seed 1 
 ```
 
 
@@ -38,6 +38,19 @@ You can download the pretrained models in this [anonymous Google drive link](htt
 
 
 
+### Robust accuracy of WideResNet-34-10 models against AutoAttack
 
 
+| CIFAR-10, $L_2$-norm Attack | Vanilla | Fast | Free | 
+| ------ | ------ | ----- | ---- | 
+| Train Accuracy (%) | 100.0 | 99.9 | 85.7 | 
+| Test Accuracy (%) | 67.7 | 66.1 | 65.3 | 
+| Generalization Gap (%) | 32.3 | 33.8 | 20.4 | 
+
+
+| CIFAR-10, $L_\infty$-norm Attack | Vanilla | Fast | Free | 
+| ------ | ------ | ----- | ---- | 
+| Train Accuracy (%) | 99.4 | 66.7 | 61.0 | 
+| Test Accuracy (%) | 45.5 | 38.2 | 46.6 | 
+| Generalization Gap (%) | 53.9 | 28.5 | 14.4 | 
 
