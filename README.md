@@ -1,4 +1,4 @@
-# Anonymous Porject
+# Anonymous Project
 
 This repository provides an official implementation of a paper that under double-blind review. The repository will be de-anonymized and released to the public after the review process.
 
@@ -6,10 +6,14 @@ This repository provides an official implementation of a paper that under double
 ## Getting started
 
 To adversarially train a ResNet-18 model against $L_2$-norm attack of radius 128.0/255.0 by the free-AT algorithm, run: 
-`python train.py   --data cifar10  --method free  --attack L2  --eps 128.0  --model res18  --save_path cifar10_l2_free`
+```
+python train.py   --data cifar10  --method free  --attack L2  --eps 128.0  --model res18  --save_path cifar10_l2_free
+```
 
 To evaluate the model against [AutoAttack](https://github.com/fra31/auto-attack), run: 
-`python3 test_autoattack.py  --model_path cifar10_l2_free  --data cifar10  --attack L2  --eps 128.0  --seed 1 `
+```
+python3 test_autoattack.py  --model_path cifar10_l2_free  --data cifar10  --attack L2  --eps 128.0  --seed 1 
+```
 
 
 
@@ -30,11 +34,6 @@ You can download the pretrained models in this [anonymous Google drive link](htt
 | Train Accuracy (%) | 89.1 | 54.4 | 57.4 | 
 | Test Accuracy (%) | 40.7 | 30.0 | 42.3 | 
 | Generalization Gap (%) | 48.4 | 23.4 | 15.1 | 
-
-
-
-
-
 
 
 
