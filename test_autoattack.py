@@ -53,11 +53,11 @@ def main():
 
     transform = transforms.Compose([transforms.ToTensor()])
     if args.data == 'cifar10':
-        trainDataset = dset.CIFAR10(root='data/cifar10', train=True, download=True, transform=transform)
-        testDataset = dset.CIFAR10(root='data/cifar10', train=False, download=True, transform=transform)
+        trainDataset = dset.CIFAR10(root='cifar10', train=True, download=True, transform=transform)
+        testDataset = dset.CIFAR10(root='cifar10', train=False, download=True, transform=transform)
     elif args.data == 'cifar100':
-        trainDataset = dset.CIFAR100(root='data/cifar100', train=True, download=True, transform=transform)
-        testDataset = dset.CIFAR100(root='data/cifar100', train=False, download=True, transform=transform)
+        trainDataset = dset.CIFAR100(root='cifar100', train=True, download=True, transform=transform)
+        testDataset = dset.CIFAR100(root='cifar100', train=False, download=True, transform=transform)
 
     kwargs = {'num_workers': 0} 
     trainLoader = DataLoader(trainDataset, batch_size=args.batchSz, shuffle=False, **kwargs)
