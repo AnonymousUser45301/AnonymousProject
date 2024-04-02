@@ -17,6 +17,14 @@ python test_autoattack.py  --model_path cifar10_l2_free  --data cifar10  --attac
 
 
 
+## Catastrophic overfitting in Fast AT
+
+We run Fast AT with attack step size $10/255$ for 200 training epochs. The training curve is plotted in the following figure. We note that Fast AT with attack step size $10/255$ encounters catastrophic overfitting over the course of 200 training epochs and it has almost zero robustness against PGD perturbations at the end of training.
+
+<img src="./curve_c10_linf.png" alt="Training curve" style="height: 250px; width:900px;"/>
+
+
+
 ## Performance Comparison
 You can download the pretrained models in this [anonymous Google drive link](https://drive.google.com/drive/folders/18so78-vONvd6lZqLs26IwnaAXxfN1BvR?usp=drive_link). The outputs are saved in `model_pth/MODEL_NAME/test_autoattack_output.log`, and it can be reproduced by setting random seed as 1. 
 
@@ -43,14 +51,13 @@ You can download the pretrained models in this [anonymous Google drive link](htt
 
 | CIFAR-10, $L_2$-norm Attack | Vanilla | Fast | Free | 
 | ------ | ------ | ----- | ---- | 
-| Train Accuracy (%) | 100.0 | 99.9 | 85.7 | 
-| Test Accuracy (%) | 67.7 | 66.1 | 65.3 | 
-| Generalization Gap (%) | 32.3 | 33.8 | 20.4 | 
+| Train Accuracy (%) | $100.0 \pm 0.0$ | $99.7 \pm 0.1$ | $83.9 \pm 1.9$ | 
+| Test Accuracy (%) | $68.5 \pm 1.9$ | $65.8 \pm 1.2$ | $67.0 \pm 0.9$ | 
+| Generalization Gap (%) | $31.5 \pm 1.9$ | $33.9 \pm 1.3$ | $16.9 \pm 2.5$ | 
 
 
 | CIFAR-10, $L_\infty$-norm Attack | Vanilla | Fast | Free | 
 | ------ | ------ | ----- | ---- | 
-| Train Accuracy (%) | 99.4 | 66.7 | 61.0 | 
-| Test Accuracy (%) | 45.5 | 38.2 | 46.6 | 
-| Generalization Gap (%) | 53.9 | 28.5 | 14.4 | 
-
+| Train Accuracy (%) | $99.2 \pm 0.3$ | $66.7 \pm 0.6$ | $61.1 \pm 1.7$ | 
+| Test Accuracy (%) | $44.5 \pm 1.3$ | $37.4 \pm 1.8$ | $48.3 \pm 2.7$ | 
+| Generalization Gap (%) | $54.7 \pm 1.5$ | $29.4 \pm 2.0$ | $12.9 \pm 2.7$ | 
