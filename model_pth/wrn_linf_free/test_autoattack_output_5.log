@@ -1,0 +1,54 @@
+2Files already downloaded and verified
+Files already downloaded and verified
+setting parameters for standard version
+
+
+
+****************************************
+Train error against auto attack: 
+****************************************
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 92.20%
+apgd-ce - 1/4 - 86 out of 250 successfully perturbed
+apgd-ce - 2/4 - 70 out of 250 successfully perturbed
+apgd-ce - 3/4 - 80 out of 250 successfully perturbed
+apgd-ce - 4/4 - 52 out of 172 successfully perturbed
+robust accuracy after APGD-CE: 63.40% (total time 133.8 s)
+apgd-t - 1/3 - 6 out of 250 successfully perturbed
+apgd-t - 2/3 - 10 out of 250 successfully perturbed
+apgd-t - 3/3 - 6 out of 134 successfully perturbed
+robust accuracy after APGD-T: 61.20% (total time 966.1 s)
+fab-t - 1/3 - 0 out of 250 successfully perturbed
+fab-t - 2/3 - 0 out of 250 successfully perturbed
+fab-t - 3/3 - 0 out of 112 successfully perturbed
+robust accuracy after FAB-T: 61.20% (total time 2611.7 s)
+square - 1/3 - 0 out of 250 successfully perturbed
+square - 2/3 - 0 out of 250 successfully perturbed
+square - 3/3 - 0 out of 112 successfully perturbed
+robust accuracy after SQUARE: 61.20% (total time 5116.7 s)
+max Linf perturbation: 0.03137, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 61.20%
+
+
+
+****************************************
+Test error against auto attack: 
+****************************************
+using standard version including apgd-ce, apgd-t, fab-t, square.
+initial accuracy: 83.30%
+apgd-ce - 1/4 - 110 out of 250 successfully perturbed
+apgd-ce - 2/4 - 114 out of 250 successfully perturbed
+apgd-ce - 3/4 - 106 out of 250 successfully perturbed
+apgd-ce - 4/4 - 34 out of 83 successfully perturbed
+robust accuracy after APGD-CE: 46.90% (total time 123.8 s)
+apgd-t - 1/2 - 10 out of 250 successfully perturbed
+apgd-t - 2/2 - 14 out of 219 successfully perturbed
+robust accuracy after APGD-T: 44.50% (total time 839.7 s)
+fab-t - 1/2 - 0 out of 250 successfully perturbed
+fab-t - 2/2 - 0 out of 195 successfully perturbed
+robust accuracy after FAB-T: 44.50% (total time 1964.1 s)
+square - 1/2 - 0 out of 250 successfully perturbed
+square - 2/2 - 0 out of 195 successfully perturbed
+robust accuracy after SQUARE: 44.50% (total time 3602.3 s)
+max Linf perturbation: 0.03137, nan in tensor: 0, max: 1.00000, min: 0.00000
+robust accuracy: 44.50%
