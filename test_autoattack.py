@@ -60,8 +60,8 @@ def main():
         testDataset = dset.CIFAR100(root='cifar100', train=False, download=True, transform=transform)
 
     kwargs = {'num_workers': 0} 
-    trainLoader = DataLoader(trainDataset, batch_size=args.batchSz, shuffle=False, **kwargs)
-    testLoader = DataLoader(testDataset, batch_size=args.batchSz, shuffle=False, **kwargs)
+    trainLoader = DataLoader(trainDataset, batch_size=args.batchSz, shuffle=True, **kwargs)
+    testLoader = DataLoader(testDataset, batch_size=args.batchSz, shuffle=True, **kwargs)
    
 
     net = torch.load(os.path.join('model_pth', args.model_path, 'latest.pth'), map_location=torch.device('cuda'))
